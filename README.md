@@ -1,1 +1,2 @@
-# ml_template
+# ml_template pytorch
+See wiki for usage
