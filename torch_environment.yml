@@ -1,5 +1,8 @@
+channels:
+- pytorch
 dependencies:
-    - tensorflow-gpu
+    - python>=3.6.0
+    - pytorch=1.4.0
     - numpy
     - matplotlib
     - scipy
@@ -13,5 +16,9 @@ dependencies:
     - seaborn
     - pip
     - pip:
+        - torchvision
         - watermark
         - pytest
+        - pre-commit
+        - black
+        - flake8
