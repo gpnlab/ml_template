@@ -1,9 +1,11 @@
+# Targets that do not create files
 .PHONY: all clean test
 
-IRIS_URL = "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
 
-all: reports/figures/exploratory.png models/random_forest.model
+# Rule to the entire pipeline
+all:
 
+# Rule to remove all generated output; see some examples below
 clean:
 	rm -f data/raw/*.csv
 	rm -f data/processed/*.pickle
@@ -11,9 +13,7 @@ clean:
 	rm -f reports/figures/*.png
 	rm -f models/*.model
 
-# Rule for dowloading raw data
-data/raw/iris.csv:
-	python src/data/download.py  $(IRIS_URL) $@
+# Add additional rules below (e.g. rule for downloading raw data)
 
 # Rule for testing
 test: all
