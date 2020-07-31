@@ -5,9 +5,6 @@ dependencies:
     - scipy
     - scikit-learn
     - jupyterlab
-    - requests
-    - click
-    - openpyxl
     - ipykernel
     - pandas
     - seaborn
